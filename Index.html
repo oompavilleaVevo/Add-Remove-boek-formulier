@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <link href="https://gitlab.fcsprint2.nl/uploads/-/system/appearance/logo/1/FC-Sprint_runner.png" rel="icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boek Formulier </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Boek Aanmaken</h1>
+        
+        <!-- Boek Invoeren Formulier -->
+        <form id="bookForm">
+            <div class="mb-3">
+                <label for="title" class="form-label">Titel<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="title" name="title" 
+                placeholder="Voer de titel van het boek in" required>
+            </div>
+            
+                 <!-- Subtitel  -->
+                <div class="mb-3">
+                   <label for="subtitle" class="form-label">Subtitel</label>
+                   <input type="text" class="form-control" id="subtitle" name="subtitle" 
+                  placeholder="Voer een subtitel in">
+                 </div>
+
+                        <!-- Auteur (verplicht) -->
+                         <div class="mb-3">
+                            <label for="author" class="form-label">Auteur<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="author" name="author" 
+                            placeholder="Voer naam van auteur in" required>
+                        </div> 
+            
+                        <!-- Uitgever (verplicht) -->
+                        <div class="mb-3">
+                            <label for="publisher" class="form-label">Uitgever<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="publisher" name="publisher" 
+                            placeholder="Voer naam van de uitgever in" required>
+                        </div> 
+            
+                        <!-- Aantal pagina's (verplicht) -->
+                        <div class="mb-3">
+                            <label for="pageCount" class="form-label">Aantal pagina's<span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" id="pageCount" name="pageCount" 
+                            placeholder="Vul aantal paginas in" required>
+                        </div>
+            
+                        
+                        <!-- Samenvatting -->
+                        <div class="mb-3">
+                            <label for="summary" class="form-label">Samenvatting</label>
+                            <textarea class="form-control" id="summary" name="summary" rows="3" 
+                            placeholder="samenvatting van het boek"></textarea>
+                        </div> 
+            
+                        <!-- Inhoud (verplicht) -->
+                        <div class="mb-3">
+                            <label for="content" class="form-label">Inhoud<span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="content" name="content" rows="5" 
+                            placeholder="boek inhoud" required></textarea>
+                        </div> 
+            
+                        <!-- ISBN (verplicht) -->
+                        <div class="mb-3">
+                            <label for="isbn" class="form-label">ISBN<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="isbn" name="isbn" 
+                            placeholder="ISBN-nummer" required>
+                        </div> 
+            
+                        <!-- Druk  (verplicht) -->
+                        <div class="mb-3">
+                            <label for="edition" class="form-label">Druk nummer<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="edition" name="edition" 
+                            placeholder="Voer druk van het boek in" required>
+                        </div> 
+            
+                        <!-- afbeeldingen -->
+                        <div class="mb-3">
+                            <label for="illustrations" class="form-label">afbeeldingen</label>
+                            <input class="form-control" type="file" id="illustrations" name="illustrations" multiple>
+                        </div> 
+
+            <button type="submit" class="btn btn-primary" id="submit">Boek Aanmaken</button>
+            <a href="./boekenkast.html" class="btn btn-primary">Mijn Boekenkast</a>
+        </form>
+    </div>
+
+    <!-- JavaScript voor het verwerken van formuliergegevens -->
+    <script src="boekformulier.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

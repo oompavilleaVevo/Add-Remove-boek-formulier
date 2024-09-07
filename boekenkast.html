@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <link href="https://cdn.discordapp.com/attachments/1239586105263783998/1281764230365970473/20240819_221338.jpg?ex=66dd9036&is=66dc3eb6&hm=13b9c87a84a65fa2b61c83bbf5556d0d57f854ac5ac1662b696c76c11f148f86&" rel="icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Boekenkast | FC-Sprint²</title>
+    <!-- Link voor Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Mijn Boekenkast</h1>
+
+                <!-- Formulier om boek toe te voegen-->
+                <form id="addToShelfForm" class="mb-4">
+                    <div class="mb-3">
+                        <label for="bookId" class="form-label">Boek ID<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="bookId" name="bookId" placeholder="Voer het boek ID in" required>
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Titel<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Voer de titel in" required>
+                    </div>
+        
+                    <button type="submit" class="btn btn-primary" id="addToShelfBtn">Voeg toe aan boekenkast</button>
+                </form>
+        
+                <!-- Formulier om een boek te kunnen verwijderen -->
+                <form id="deleteBookForm" class="mb-4">
+                    <div class="mb-3">
+                        <label for="deleteBookId" class="form-label">Boek ID om volledig te verwijderen<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="deleteBookId" name="deleteBookId" placeholder="Voer het boek ID in" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger" id="deleteBookBtn">Verwijder boek volledig</button>
+                </form>
+        
+                <!-- Formulier om boek te verwijderen -->
+                <form id="removeFromShelfForm" class="mb-4">
+                    <div class="mb-3">
+                        <label for="removeBookId" class="form-label">Boek ID<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="removeBookId" name="removeBookId" placeholder="Voer het boek ID in" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger" id="removeFromShelfBtn">Verwijder uit boekenkast</button>
+                </form>
+                
+                <a href="./Index.html" class="btn btn-primary">Boek aanmaak formulier</a>
+        
+        <!-- Resultaat van toevoeging en verwijderen -->
+            <div id="result" class="alert" style="display:none;"></div>
+
+        <!-- Boekenlijst en Boeken in Boekenkast -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h2>Alle Boeken</h2>
+                <table class="table table-striped" id="booksTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Titel</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Boeken in Boekenkast</h2>
+                <table class="table table-striped" id="bookshelfTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Titel</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="Boekmanager.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
